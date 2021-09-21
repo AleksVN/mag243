@@ -39,5 +39,6 @@ class Test
         echo '<br>';
         $newManager = $this->managerFactory->create();
         print_r(get_class($newManager));
+        echo '<br>';
     }
 }
