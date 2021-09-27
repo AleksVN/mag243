@@ -1,6 +1,6 @@
 <?php
 
-namespace Training\TestOM\Model;
+namespace Training\AdditionalTestOM\Model;
 
 class Test
 {
@@ -8,23 +8,17 @@ class Test
     private $arrayList;
     private $name;
     private $number;
-    /**
-     * @var \Training\TestOM\Model\ManagerInterfaceFactory
-     */
-    private ManagerInterfaceFactory $managerFactory;
 
     public function __construct(
-        \Training\TestOM\Model\ManagerInterface $manager,
+        \Training\AdditionalTestOM\Model\ManagerInterface $manager,
         $name,
         int $number,
-        array $arrayList,
-        \Training\TestOM\Model\ManagerInterfaceFactory $managerFactory
+        array $arrayList
     ) {
         $this->manager = $manager;
         $this->name = $name;
         $this->number = $number;
         $this->arrayList = $arrayList;
-        $this->managerFactory = $managerFactory;
     }
 
     public function log()
@@ -36,8 +30,5 @@ class Test
         print_r($this->number);
         echo '<br>';
         print_r($this->arrayList);
-        echo '<br>';
-        $newManager = $this->managerFactory->create();
-        print_r(get_class($newManager));
     }
 }
