@@ -2,9 +2,9 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
-    <preference for="Training\AdditionalTestOM\Model\ManagerInterface" type="Training\AdditionalTestOM\Model\ManagerCustom" />
+    <preference for="Training\TestOM\Model\ManagerInterface" type="Training\AdditionalTestOM\Model\ManagerCustom" />
 
-    <type name="Training\AdditionalTestOM\Model\Test">
+    <type name="Training\TestOM\Model\Test">
         <arguments>
             <argument name="name" xsi:type="string">Custom String from AdditionalTestOM</argument>
             <argument name="number" xsi:type="number">420</argument>
