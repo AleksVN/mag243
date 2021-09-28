@@ -17,6 +17,7 @@ class View
 
     public function aroundExecute(
         \Magento\Catalog\Controller\Product\View $subject,
+       // \Training\Test\Plugin\Controller\Product\View $subject,
         \Closure $proceed
     ) {
         if (!$this->customerSession->isLoggedIn()) {

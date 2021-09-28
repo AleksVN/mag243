@@ -9,7 +9,7 @@
         <plugin name="modify_template_top_search" type="Training\Test\Plugin\Block\Template" />
     </type>
 
-    <type name="Magento\Catalog\Controller\Product\View">
-        <plugin name="redirect_unlogged" type="Training\Test\Plugin\Controller\Product\View" />
-    </type>
+<!--    <type name="Magento\Catalog\Controller\Product\View">-->
+<!--        <plugin name="redirect_unlogged" type="Training\Test\Plugin\Controller\Product\View" />-->
+<!--    </type>-->
 </config>
