@@ -341,6 +341,7 @@ return [
         'Training_TestOM' => 0,
         'Training_Dependency2' => 0,
         'Training_Dependency' => 0,
+        'Training_Render' => 1,
         'Training_Test' => 1,
         'Training_AdditionalTestOM' => 0,
         'Vertex_Tax' => 1,
