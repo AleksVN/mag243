@@ -1,0 +1,16 @@
+<?php
+/** @var $block \Voloshkov\News\Block\Edit
+ * @var $allNews  \Voloshkov\News\Model\NewsModel[]
+ */
+$allNews = $block->getData('allNews'); ?>
+
+<?php foreach ($allNews as $news) : ?>
+    <div class="one_news">
+        <h3><a href="<?= $block->getViewUrl($news->getId()); ?>"> <?= $news->getData('title') ?></a></h3>
+        <p> <?= $news->getData('description') ?> </p>
+    </div>
+    <div class="info">
+        <h5>Update: <?= $news->getData('updated_at') ?></h5>
+    </div>
+
+<?php endforeach; ?>

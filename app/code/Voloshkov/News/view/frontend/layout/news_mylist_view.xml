@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>View</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <container name="container_view_new" htmlId="viewNews" htmlTag="div">
+                <block class="Voloshkov\News\Block\Edit" name="news.view" template="Voloshkov_News::view.phtml"
+                       cacheable="false"/>
+                <block name="test.test"/>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

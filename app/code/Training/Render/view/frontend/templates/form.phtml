@@ -1,0 +1,9 @@
+<?php
+$viewModel = $this->getData('view_model');
+?>
+<div>
+    <form action="<?= $this->getViewModel()->getSubmitUrl() ?>" method="post">
+        <input type="text" name="test_name"/>
+        <input type="submit"/>
+    </form>
+</div>

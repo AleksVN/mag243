@@ -1,0 +1,18 @@
+<?php
+/** @var \Voloshkov\News\Model\NewsModel $news */
+
+$news = $block->getData('news');
+?>
+<div>
+    <form action="<?= $block->getViewModel()->getSaveUrl() ?>" method="post">
+
+        <input name="id" type="hidden" value="<?= $news->getId() ?>">
+
+        <p><input name="title" value="<?= $news->getData('title') ?>"> Title</p>
+        <p><input name="description" value="<?= $news->getData('description') ?>"> Description</p>
+        <p><input name="content" value="<?= $news->getData('content') ?>"> Content</p>
+
+        <button type="submit">Save</button>
+
+    </form>
+</div>

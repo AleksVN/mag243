@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Add/Edit</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block name="edit.vm" template="Voloshkov_News::edit.phtml" cacheable="false">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Voloshkov\News\ViewModel\Urls</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

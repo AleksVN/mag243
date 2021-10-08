@@ -349,7 +349,7 @@ return [
         'Vertex_RequestLoggingApi' => 1,
         'Vertex_RequestLogging' => 1,
         'Vertex_AddressValidation' => 1,
-        'Voloshkov_News' => 0,
+        'Voloshkov_News' => 1,
         'Yotpo_Yotpo' => 1
     ]
 ];

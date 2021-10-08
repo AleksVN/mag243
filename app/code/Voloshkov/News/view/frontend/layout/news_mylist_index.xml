@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>All</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block name="news" template="Voloshkov_News::block.phtml">
+
+                <block name="index" class="Voloshkov\News\Block\Edit" template="Voloshkov_News::index.phtml"
+                       cacheable="false"/>
+
+                <container name="container_sort_news" htmlId="sortNews" htmlTag="div">
+                    <block name="sort.news" class="Voloshkov\News\Block\Edit" template="Voloshkov_News::filters.phtml"
+                           cacheable="false" before="index"/>
+                </container>
+            </block>
+
+        </referenceContainer>
+    </body>
+</page>

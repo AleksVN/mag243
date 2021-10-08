@@ -1,0 +1,18 @@
+<?php /** @var \Voloshkov\News\Block\Edit $block */
+/** @var \Voloshkov\News\Model\NewsModel $news */
+$news = $block->getData('news');
+?>
+
+<div class="one_view_news">
+    <?php if ($block->getData('userType') === \Magento\Authorization\Model\UserContextInterface::USER_TYPE_CUSTOMER) : ?>
+        <a href="<?= $block->getEditUrl(); ?>">Edit</a> <br>
+    <?php endif; ?>
+    <h3><?= $news->getData('title') ?></h3>
+
+    <p><?= $news->getData('content') ?> </p>
+</div>
+
+
+<div class="info">
+    <h5>Update: <?= $news->getData('updated_at') ?></h5>
+</div>
