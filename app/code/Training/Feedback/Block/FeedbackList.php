@@ -8,17 +8,20 @@ class FeedbackList extends \Magento\Framework\View\Element\Template
     private $collectionFactory;
     private $collection;
     private $timezone;
+    private $feedbackResource;
 
-    public function __construct(
-        \Magento\Framework\View\Element\Template\Context $context,
-        \Training\Feedback\Model\ResourceModel\Feedback\CollectionFactory $collectionFactory,
-        \Magento\Framework\Stdlib\DateTime\Timezone $timezone,
-        array $data = array()
-    ) {
-        parent::__construct($context, $data);
-        $this->collectionFactory = $collectionFactory;
-        $this->timezone = $timezone;
-    }
+public function __construct(
+    \Magento\Framework\View\Element\Template\Context $context,
+    \Training\Feedback\Model\ResourceModel\Feedback\CollectionFactory $collectionFactory,
+    \Magento\Framework\Stdlib\DateTime\Timezone $timezone,
+    \Training\Feedback\Model\ResourceModel\Feedback $feedbackResource,
+    array $data = [])
+{
+    parent::__construct($context, $data);
+    $this->collectionFactory = $collectionFactory;
+    $this->timezone = $timezone;
+    $this->feedbackResource = $feedbackResource;
+}
 
     public function getCollection()
     {
@@ -64,5 +67,15 @@ class FeedbackList extends \Magento\Framework\View\Element\Template
     {
         return $this->timezone->formatDateTime($feedback->getCreationTime());
 
+    }
+
+    public function getAllFeedbackNumber()
+    {
+        return $this->feedbackResource->getAllFeedbackNumber();
+    }
+
+    public function getActiveFeedbackNumber()
+    {
+        return $this->feedbackResource->getActiveFeedbackNumber();
     }
 }
